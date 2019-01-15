@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maspamz.footballclub">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Match Activity-->
+        <activity android:name="com.maspamz.footballclub.MainMatch"
+            android:parentActivityName="com.maspamz.footballclub.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maspamz.footballclub.MainActivity" />
+        </activity>
+        <activity android:name="com.maspamz.footballclub.DetailActivityMatch"
+            android:parentActivityName="com.maspamz.footballclub.MainMatch">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maspamz.footballclub.MainMatch" />
+        </activity>
+        <!--End Match Activity-->
+
+        <!--Club Activity-->
+        <activity android:name="com.maspamz.footballclub.MainClub"
+            android:parentActivityName="com.maspamz.footballclub.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maspamz.footballclub.MainActivity" />
+        </activity>
+        <activity android:name="com.maspamz.footballclub.DetailActivityTabs"
+            android:parentActivityName="com.maspamz.footballclub.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maspamz.footballclub.MainActivity" />
+        </activity>
+        <activity android:name="com.maspamz.footballclub.DetailActivityPlayer"
+            android:parentActivityName="com.maspamz.footballclub.DetailActivityTabs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maspamz.footballclub.DetailActivityTabs" />
+        </activity>
+        <!--End Club Activity-->
+
+        <activity android:name="com.maspamz.footballclub.MainFavorite"
+            android:parentActivityName="com.maspamz.footballclub.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maspamz.footballclub.MainActivity" />
+        </activity>
+
+
+        <activity android:name="com.maspamz.footballclub.MainMyAbout"
+            android:parentActivityName="com.maspamz.footballclub.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maspamz.footballclub.MainActivity" />
+        </activity>
+
+
+    </application>
+
+</manifest>
